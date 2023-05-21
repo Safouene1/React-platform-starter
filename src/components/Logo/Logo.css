@@ -1,0 +1,43 @@
+.Logo {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%; /* Make the logo responsive in width */
+    height: 100%; /* Make the logo responsive in height */
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    max-width: 320px; /* Set a max-width for the logo */
+    max-height: 100px; /* Set a max-height for the logo */
+}
+
+/* CSS for white class */
+.white {
+    background-color: white;
+}
+
+
+/* Media queries for adjusting the logo size */
+@media screen and (min-width: 768px) {
+    .Logo {
+        max-width: 320px;
+        max-height: 80px;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Logo {
+        max-width: 320px;
+        max-height: 100px;
+    }
+}
+
+
+.dashboard {
+    top:0;
+    bottom: 0;
+    float: left;
+    max-width: 150px; /* Set a max-width for the logo */
+    max-height: 90px;
+    color:white;
+}

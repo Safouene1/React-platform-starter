@@ -1,0 +1,71 @@
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+/*
+The `.authLayout__left__content` class defines the background image and rounded edges for the left content section in the login page.
+It can be configurable by changing the background image for other pages such as Sing up.
+*/
+.authLayout__left__content {
+    background-image: var(--auth-bg-image);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: repeat;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 100%;
+    clip-path:polygon(0 0, 97% 0, 85% 100%, 0% 100%);
+}
+@media (max-width: 767px) {
+    /* XS breakpoint */
+    .login-form{
+        background-color: aliceblue;
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+    .authLayout__right__content  {
+        background-image: var(--auth-mobile-bg-image);
+        background-size: cover;
+
+    }
+    .authLayout__right__content  .svg {
+        fill: aliceblue;
+
+    }
+
+
+
+}
+
+
+
+
+.login-form {
+    max-width: 900px;
+}
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+.ant-form-item-control-input input {
+    height: 50px;
+}
+
+/* Increase the padding of the input field */
+.ant-form-item-control-input input {
+    padding: 16px;
+}
+
+/* Increase the height of the label */
+.ant-form-item-label {
+    height: 60px;
+}

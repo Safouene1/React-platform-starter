@@ -1,0 +1,61 @@
+{
+  "name": "safouen-starter",
+  "version": "0.3.0",
+  "license": "MIT",
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "serve": "serve dist",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts,.tsx,.js,jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,jsx --fix",
+    "typecheck": "tsc --noEmit",
+    "prettier": "prettier --write \"**/*.+(json|yml|css|md|mdx)\"",
+    "clean": "rimraf node_modules package-lock.json dist",
+    "validate": "./scripts/validate",
+    "remove:tailwind": "./scripts/remove_tailwind"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "antd": "^5.4.7",
+    "ky": "^0.33.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jsdom": "^21.1.1",
+    "node-fetch": "^3.3.1",
+    "prettier": "^2.8.7",
+    "serve": "^14.2.0",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
+  }
+}
