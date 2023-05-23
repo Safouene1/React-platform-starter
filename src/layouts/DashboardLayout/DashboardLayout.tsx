@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import { Outlet, redirect, useLocation, useNavigate } from 'react-router-dom';
-import "./DashboardLayout.css";
+import React from 'react';
+import { Layout, Menu, theme } from 'antd';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import './DashboardLayout.css';
 import { Footer } from 'antd/es/layout/layout';
 import { AppFooter } from '../AppFooter';
 import { LogoWhite } from '../../components/Logo/Logo';
@@ -17,16 +17,19 @@ export const DashboardLayout: React.FC = () => {
     token: { colorBgContainer },
   } = theme.useToken();
 
-
   const handleMenuSelect = (param: any) => {
-    console.log(param.item)
     navigate(param.item.props.to);
   };
   return (
     <Layout>
       <Header className="header">
-        <LogoWhite className={"dashboard"}/>
-        <Menu theme={"dark"}  mode="horizontal"  style={{justifyContent: "center" }} items={headerItems} />
+        <LogoWhite className={'dashboard'} />
+        <Menu
+          theme={'dark'}
+          mode="horizontal"
+          style={{ justifyContent: 'center' }}
+          items={headerItems}
+        />
       </Header>
       <Layout>
         <Sider width={300} style={{ background: colorBgContainer }}>
@@ -36,32 +39,25 @@ export const DashboardLayout: React.FC = () => {
             style={{ height: '100%', borderRight: 0 }}
             items={sidebarItems}
             onSelect={handleMenuSelect}
-
           />
         </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
+        <Layout style={{ padding: '25px 24px 24px' }}>
           <Content
             style={{
-              padding: 24,
-              margin: 0,
+              padding: 25,
+              margin: 2,
               minHeight: 280,
               background: colorBgContainer,
             }}
-            className={"all-screen"}
+            className={'all-screen'}
           >
-            <Outlet/>
+            <Outlet />
           </Content>
         </Layout>
       </Layout>
       <Footer>
-        <AppFooter/>
+        <AppFooter />
       </Footer>
     </Layout>
   );
 };
-
