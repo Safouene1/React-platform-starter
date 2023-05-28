@@ -1,6 +1,7 @@
 import { ProCard, StatisticCard } from '@ant-design/pro-components';
 import RcResizeObserver from 'rc-resize-observer';
 import React, { useState } from 'react';
+import Title from 'antd/es/typography/Title';
 
 const { Statistic } = StatisticCard;
 
@@ -14,6 +15,8 @@ export const Stocks: React.FC = () => {
         setResponsive(offset.width < 596);
       }}
     >
+      <Title level={4}>General Overview</Title>
+
       <ProCard split={responsive ? 'horizontal' : 'vertical'}>
         <StatisticCard
           colSpan={responsive ? 24 : 6}

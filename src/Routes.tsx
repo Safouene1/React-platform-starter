@@ -8,6 +8,7 @@ import NotFound from './pages/Error/NotFound/NotFound';
 import { RequireAuth } from './components/util/RequireAuth';
 import { Users } from './pages/Dashboard/Users/Users';
 import { Stocks } from './pages/Dashboard/Statistics/Stocks/Stocks';
+import { Market } from './pages/Dashboard/Statistics/Market/Market';
 
 const authenticated = true;
 export const router = createBrowserRouter([
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
               {
                 path: 'stocks',
                 element: <Stocks />,
+              },
+              {
+                path: 'market',
+                element: <Market />,
               },
             ],
           },

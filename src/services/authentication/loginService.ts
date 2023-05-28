@@ -1,7 +1,7 @@
 import { authapi } from './apiconfig';
 
 export interface LoginResponse {
-  accessToken: string;
+  token: string;
 }
 
 export interface LoginCredentials {

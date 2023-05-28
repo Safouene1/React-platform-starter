@@ -1,6 +1,18 @@
 import { Avatar, Badge, MenuProps } from 'antd';
-import { SettingOutlined ,LogoutOutlined,NotificationTwoTone,SmileOutlined  } from '@ant-design/icons';
+import {
+  SettingOutlined,
+  LogoutOutlined,
+  NotificationTwoTone,
+  SmileOutlined,
+} from '@ant-design/icons';
 import React from 'react';
+
+import { logout } from '../../../store/User/userSlice';
+import { store } from '../../../store/store';
+
+function handleLogout() {
+  store.dispatch(logout());
+}
 
 export const headerItems: MenuProps['items'] = [
   {
@@ -13,7 +25,6 @@ export const headerItems: MenuProps['items'] = [
       </div>
     ),
     style: { marginLeft: 'auto' },
-
   },
   {
     key: 'user',
@@ -33,19 +44,19 @@ export const headerItems: MenuProps['items'] = [
         key: 'profile',
         label: 'Profile',
         icon: <SmileOutlined />,
-        onClick: () => console.log('handle logout'),
+        onClick: () => console.log('handle profile'),
       },
       {
         key: 'settings',
         label: 'Settings',
-        icon:<SettingOutlined />,
-        onClick: () => console.log('handle logout'),
+        icon: <SettingOutlined />,
+        onClick: () => console.log('handle settings'),
       },
       {
         key: 'logout',
         label: 'Logout',
-        icon:<LogoutOutlined />,
-        onClick: () => console.log('handle logout'),
+        icon: <LogoutOutlined />,
+        onClick: () => handleLogout(),
       },
     ],
   },

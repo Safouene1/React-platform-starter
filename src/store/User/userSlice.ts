@@ -3,18 +3,21 @@ import {
   login,
   LoginCredentials,
   LoginResponse,
-} from '../../services/authentication/authService';
+} from '../../services/authentication/loginService';
 
 interface AuthState {
-  user: LoginResponse | null;
+  token: LoginResponse | null;
   loading: boolean;
   error: string | null;
+
+  authenticated: boolean;
 }
 
 const initialState: AuthState = {
-  user: null,
+  token: null,
   loading: false,
   error: null,
+  authenticated: false,
 };
 
 export const logout = createAction('auth/logout');
@@ -43,7 +46,8 @@ const userSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload;
+        state.token = action.payload;
+        state.authenticated = true;
         localStorage.setItem('user', JSON.stringify(action.payload));
       })
       .addCase(loginUser.rejected, (state, action) => {
@@ -51,7 +55,8 @@ const userSlice = createSlice({
         state.error = action.error.message || 'Login failed.';
       })
       .addCase(logout, (state) => {
-        state.user = null;
+        state.token = null;
+        state.authenticated = false;
         localStorage.removeItem('user');
       });
   },
