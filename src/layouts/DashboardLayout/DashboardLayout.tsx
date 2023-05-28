@@ -32,7 +32,11 @@ export const DashboardLayout: React.FC = () => {
         />
       </Header>
       <Layout>
-        <Sider width={300} style={{ background: colorBgContainer }}>
+        <Sider
+          className={'sider'}
+          width={300}
+          style={{ background: colorBgContainer }}
+        >
           <Menu
             mode="inline"
             defaultSelectedKeys={[location.pathname]}
@@ -41,12 +45,12 @@ export const DashboardLayout: React.FC = () => {
             onSelect={handleMenuSelect}
           />
         </Sider>
-        <Layout style={{ padding: '25px 24px 24px' }}>
+        <Layout style={{ padding: '25px 24px 0px' }}>
           <Content
             style={{
               padding: 25,
-              margin: 2,
-              minHeight: 280,
+              margin: 1,
+              minHeight: 755,
               background: colorBgContainer,
             }}
             className={'all-screen'}

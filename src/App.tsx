@@ -1,19 +1,20 @@
-import React from 'react'
-
-import './App.css'
+import React from 'react';
+import enUS from 'antd/lib/locale/en_US';
+import './App.css';
 import { RouterProvider } from 'react-router-dom';
-import {  router } from './Routes';
+import { router } from './Routes';
 import * as themeConfig from '../themeConfig.json';
-import { ConfigProvider, theme } from 'antd';
-
-
+import { ConfigProvider } from 'antd';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
 const App: React.FC = () => {
-
   return (
-    <ConfigProvider theme={{ ...themeConfig}}>
-    <RouterProvider router={router} />
-    </ConfigProvider>
-  )
-}
+    <Provider store={store}>
+      <ConfigProvider theme={{ ...themeConfig }} locale={enUS}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
+    </Provider>
+  );
+};
 
-export default App
+export default App;

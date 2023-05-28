@@ -22,8 +22,10 @@
     "remove:tailwind": "./scripts/remove_tailwind"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.3",
+    "@ant-design/pro-components": "^2.4.16",
+    "@reduxjs/toolkit": "^1.9.5",
     "antd": "^5.4.7",
+    "axios": "^1.4.0",
     "ky": "^0.33.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

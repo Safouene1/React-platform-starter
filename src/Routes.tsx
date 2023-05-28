@@ -6,6 +6,8 @@ import { Login } from './pages/Login/Login';
 import { AuthenticationLayout } from './layouts/AuthenticationLayout/AuthenticationLayout';
 import NotFound from './pages/Error/NotFound/NotFound';
 import { RequireAuth } from './components/util/RequireAuth';
+import { Users } from './pages/Dashboard/Users/Users';
+import { Stocks } from './pages/Dashboard/Statistics/Stocks/Stocks';
 
 const authenticated = true;
 export const router = createBrowserRouter([
@@ -40,6 +42,19 @@ export const router = createBrowserRouter([
           {
             path: 'dashboard',
             element: <Home />,
+          },
+          {
+            path: 'users',
+            element: <Users />,
+          },
+          {
+            path: 'statistics',
+            children: [
+              {
+                path: 'stocks',
+                element: <Stocks />,
+              },
+            ],
           },
           {
             path: '*',
