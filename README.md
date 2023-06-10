@@ -1,7 +1,7 @@
 
-<p align="center">
-  <img src="https://github.com/Safouene1/React-platform-starter/assets/22036449/9878d0b8-ec8d-4c37-923c-2ad05d569b5a" alt="logo 1">
-</p>
+
+ ![logo 1](https://github.com/Safouene1/React-platform-starter/assets/22036449/c21de586-fc4f-42d0-ab9b-5b9566084aee)
+
 
 
 # Overview
@@ -32,7 +32,9 @@ Platform Starter is a starter boilerplate for building web applications using Re
 
 Fully Configurable Theme Just through a [JSON file](https://github.com/Safouene1/React-platform-starter/blob/master/themeConfig.json) using ant design V5 full
 features . [How to configure](https://ant.design/docs/react/customize-theme/)
-![Group 14](https://github.com/Safouene1/React-platform-starter/assets/22036449/410e47d2-8f24-4fb2-884d-3b6dd48f13b1)
+
+![Group 14](https://github.com/Safouene1/React-platform-starter/assets/22036449/c34a00ad-2e55-4b20-8f0e-591a0e0bcd2e)
+
 
 
 ## Project Structure 
