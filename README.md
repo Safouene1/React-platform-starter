@@ -1,4 +1,4 @@
-
+[![StandWithPalestine](https://github.com/Safouene1/support-palestine-banner/blob/master/StandWithPalestine.svg)](https://github.com/Safouene1/support-palestine-banner)
 
  ![logo 1](https://github.com/Safouene1/React-platform-starter/assets/22036449/c21de586-fc4f-42d0-ab9b-5b9566084aee)
 
